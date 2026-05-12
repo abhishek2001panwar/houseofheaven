@@ -22,5 +22,38 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  
+}
+.font-serif {
+  font-family: var(--font-cormorant);
+}
+.font-luxury {
+  font-family: var(--font-cormorant);
+}
+
+.font-clean {
+  font-family: var(--font-inter);
+}
+
+::-webkit-scrollbar{
+  width: 1px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-cormorant);
+  font-weight: 400;
+}
+
+p,
+span,
+button,
+a,
+li,
+input,
+textarea {
+  font-family: var(--font-inter);
 }
