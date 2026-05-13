@@ -29,9 +29,22 @@ const images = [
 
 export default function PremiumGallery() {
   return (
-    <section className="w-full bg-[#f8f6f2] py-0 py-10 ">
+    <section id="gallery" className="w-full bg-[#f8f6f2] py-0 py-10 ">
       <div className="mx-auto max-w-full">
-        <div className="grid grid-cols-3 w-full">
+        {/* TOP LEFT GALLERY HEADING */}
+        <div className="w-full flex p-10">
+<p
+            className="
+              font-clean
+              text-[10px]
+              uppercase
+              tracking-[0.4em]
+              text-black/60
+            "
+          >
+           Our  Gallery
+          </p>        </div>
+        <div className="grid grid-cols-3 w-full p-5">
           {images.map((img) => (
             <div
               key={img.id}

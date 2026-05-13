@@ -5,18 +5,18 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const navItems = [
-  
-  
-  "About",
-  "Portfolio",
-  "Gallery",
-  "Contact",
+  { label: "About", href: "/#about" },
+  { label: "Portfolio", href: "/#portfolio" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Couple", href: "/#couple" },
 ];
 
 export default function LuxuryNavbar() {
   const [showNavbar, setShowNavbar] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -153,8 +153,8 @@ export default function LuxuryNavbar() {
             >
               {navItems.map((item) => (
                 <Link
-                  key={item}
-                  href="/"
+                  key={item.label}
+                  href={item.href}
                   className="
                     group
                     relative
@@ -167,8 +167,7 @@ export default function LuxuryNavbar() {
                     hover:text-white
                   "
                 >
-                  {item}
-
+                  {item.label}
                   <span
                     className="
                       absolute
@@ -191,6 +190,7 @@ export default function LuxuryNavbar() {
               
               {/* CTA */}
               <button
+              onClick={() => router.push("/#contact")}
                 className="
                   hidden
                   overflow-hidden

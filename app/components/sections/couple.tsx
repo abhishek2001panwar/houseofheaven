@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+
 import { useState } from 'react';
 
 const couples = [
@@ -31,7 +31,7 @@ const couples = [
     id: 3,
     names: 'Pravallika & Akhil',
     mainImg:
-      '/images/heronew3.png',
+      '/images/pravalika.jpg',
     smallImg:
       '/images/portrait7.png',
     bg:
@@ -54,6 +54,7 @@ export default function CoupleStories() {
 
   return (
     <section
+    id='couple'
       className="
         relative
         w-full
@@ -211,6 +212,7 @@ export default function CoupleStories() {
               <h1
                 className="
                   text-[3rem]
+                  uppercase
                   leading-[0.9]
                   text-white
                   drop-shadow-[0_8px_30px_rgba(0,0,0,0.35)]
@@ -224,69 +226,47 @@ export default function CoupleStories() {
           </div>
         </div>
 
-        {/* NAVIGATION */}
-        <div
-          className="
-            mt-12
-            flex
-            items-center
-            justify-end
-            gap-5
-            pr-2
-            md:pr-8
-          "
-        >
-          
+        {/* NAVIGATION BELOW NAMES */}
+        <div className="mt-10 w-full max-w-6xl flex justify-between items-center px-10 md:px-16">
+          {/* LEFT */}
           <button
             onClick={prevSlide}
-            className="
-              flex
-              h-14
-              w-14
-              items-center
-              justify-center
-              rounded-full
-              border
-              border-white/50
-              bg-white/20
-              text-white
-              backdrop-blur-md
-              transition-all
-              duration-500
-              hover:bg-white
-              hover:text-black
-            "
+            className="group transition-all duration-300 active:scale-95"
+            aria-label="Previous slide"
           >
-            <ArrowLeft
-              size={22}
-              strokeWidth={1.5}
-            />
+            <svg
+              width="55"
+              height="16"
+              viewBox="0 0 55 16"
+              fill="none"
+              className="text-black group-hover:text-stone-400 transition-colors duration-300"
+            >
+              <path
+                d="M55 8L1 8M1 8L8 1M1 8L8 15"
+                stroke="currentColor"
+                strokeWidth="1"
+              />
+            </svg>
           </button>
-
+          {/* RIGHT */}
           <button
             onClick={nextSlide}
-            className="
-              flex
-              h-14
-              w-14
-              items-center
-              justify-center
-              rounded-full
-              border
-              border-white/50
-              bg-white/20
-              text-white
-              backdrop-blur-md
-              transition-all
-              duration-500
-              hover:bg-white
-              hover:text-black
-            "
+            className="group transition-all duration-300 active:scale-95"
+            aria-label="Next slide"
           >
-            <ArrowRight
-              size={22}
-              strokeWidth={1.5}
-            />
+            <svg
+              width="55"
+              height="16"
+              viewBox="0 0 55 16"
+              fill="none"
+              className="text-black group-hover:text-stone-400 transition-colors duration-300"
+            >
+              <path
+                d="M0 8H54M54 8L47 1M54 8L47 15"
+                stroke="currentColor"
+                strokeWidth="1"
+              />
+            </svg>
           </button>
         </div>
       </div>

@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 
 export default function MomentsSection() {
   return (
-    <section className="w-full bg-[#f5f3ef] px-5 py-24 md:px-10 lg:px-20">
+    <section id="about" className="w-full bg-[#f5f3ef] px-5 py-24 md:px-10 lg:px-20">
       
       <div className="mx-auto max-w-[1400px]">
 
         {/* TOP CONTENT */}
-        <div className="mx-auto max-w-[850px] text-center">
+        <div className="mx-auto max-w-7xl text-center">
           
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
@@ -21,16 +21,17 @@ export default function MomentsSection() {
               text-[#111]
               leading-[1.1]
               text-[2.3rem]
-              md:text-[4.5rem]
+              md:text-[4rem]
+              uppercase
             "
           >
             Capturing the{" "}
-            <span className="italic font-light">
+            <span className="font-serif font-light">
               moments
             </span>
             <br />
             that{" "}
-            <span className="italic font-light">
+            <span className="font-serif font-light">
               really
             </span>{" "}
             MATTER.
@@ -71,7 +72,7 @@ export default function MomentsSection() {
               "
             >
               <img
-                src="/images/couple3.png"
+                src="/images/moments.jpg"
                 alt=""
                 className="
                   h-[420px]
@@ -98,7 +99,7 @@ export default function MomentsSection() {
               "
             >
               <img
-                src="/images/house.png"
+                src="/images/about.png"
                 alt=""
                 className="
                   h-[320px]
@@ -130,7 +131,7 @@ export default function MomentsSection() {
               "
             >
               <img
-                src="/images/portrait5.png"
+                src="/images/moments1.jpg"
                 alt=""
                 className="
                   h-[340px]

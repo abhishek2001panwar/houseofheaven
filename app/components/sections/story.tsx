@@ -40,61 +40,24 @@ const Story: React.FC = () => {
       >
         
         {/* TEXT BLOCK */}
-        <div className="max-w-[260px] md:max-w-[340px]">
-          
+        <div className="max-w-[320px] md:max-w-[400px]">
           {/* SMALL LABEL */}
           <p
-            className="
-              font-clean
-              text-[9px]
-              uppercase
-              tracking-[0.45em]
-              text-white/60
-            "
+            className="font-sans text-[10px] md:text-[12px] uppercase tracking-[0.3em] text-white/70 mb-2"
           >
-            Wedding Photography
+            Wedding Stories
           </p>
-
-          {/* HEADING */}
+          {/* MODERN HEADING */}
           <h1
-            className="
-              mt-5
-              font-luxury
-              text-left
-              text-white
-              uppercase
-              leading-[1.5]
-              tracking-[0.22em]
-              text-[13px]
-              md:text-[20px]
-              font-light
-            "
+            className="text-white font-bold text-2xl md:text-4xl leading-tight mb-4 drop-shadow-lg"
           >
-            Honest imagery
-            <br />
-            with timeless
-            <br />
-            storytelling
+            Timeless. Honest. You.
           </h1>
-
-          {/* SMALL TEXT */}
+          {/* SHORT MODERN SUBTEXT */}
           <p
-            className="
-              mt-6
-              font-clean
-              text-left
-              text-white/75
-              uppercase
-              leading-[2]
-              tracking-[0.16em]
-              text-[8px]
-              md:text-[9px]
-            "
+            className="text-white/80 text-[12px] md:text-[14px] font-light"
           >
-            Capturing refined moments,
-            natural emotion, and the
-            atmosphere that defines
-            your story.
+            Modern wedding photography for real moments and real people.
           </p>
         </div>
       </div>

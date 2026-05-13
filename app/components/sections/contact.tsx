@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactSection: React.FC = () => {
   return (
-    <section className="flex h-screen w-full flex-col overflow-hidden bg-[#f8f6f2] lg:flex-row">
+    <section id='contact' className="flex h-screen w-full flex-col overflow-hidden bg-[#f8f6f2] lg:flex-row">
       
       {/* IMAGE SIDE */}
       <div className="relative h-[38vh] w-full overflow-hidden lg:h-screen lg:w-[46%]">
@@ -42,7 +42,8 @@ const ContactSection: React.FC = () => {
               text-[2rem]
               leading-[1.1]
               text-black
-              md:text-[3rem]
+              md:text-[2rem]
+              font-serif
             "
           >
             Tell us more about your

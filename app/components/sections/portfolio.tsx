@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const portfolioImages = [
   {
@@ -36,8 +37,9 @@ const portfolioImages = [
 ];
 
 export default function PortfolioSection() {
+    const router = useRouter();
   return (
-    <section className="w-full bg-[#2e2d2d] py-28 px-5 md:px-10">
+    <section id="portfolio" className="w-full bg-[#2e2d2d] py-28 px-5 md:px-10">
       
       <div className="mx-auto max-w-[760px]">
 
@@ -138,7 +140,7 @@ export default function PortfolioSection() {
                 >
                 
 
-                  <button
+                  {/* <button
                     className="
                       mt-6
                       border
@@ -157,7 +159,7 @@ export default function PortfolioSection() {
                     "
                   >
                     Browse Portfolio
-                  </button>
+                  </button> */}
                 </div>
               </motion.div>
             ))}
@@ -221,7 +223,7 @@ export default function PortfolioSection() {
             >
              
 
-              <button
+              {/* <button
                 className="
                   mt-6
                   border
@@ -240,7 +242,7 @@ export default function PortfolioSection() {
                 "
               >
                 Browse Portfolio
-              </button>
+              </button> */}
             </div>
           </motion.div>
 
@@ -304,17 +306,8 @@ export default function PortfolioSection() {
                     justify-center
                   "
                 >
-                  <h3
-                    className="
-                      font-luxury
-                      text-white
-                      text-[2rem]
-                      md:text-[3.5rem]
-                    "
-                  >
-                    {item.title}
-                  </h3>
-
+                 
+{/* 
                   <button
                     className="
                       mt-6
@@ -334,7 +327,7 @@ export default function PortfolioSection() {
                     "
                   >
                     Browse Portfolio
-                  </button>
+                  </button> */}
                 </div>
               </motion.div>
             ))}
@@ -358,6 +351,7 @@ export default function PortfolioSection() {
           className="mt-16 flex justify-center"
         >
           <button
+          onClick={()=> router.push("/portfolio")}
             className="
               group
               relative

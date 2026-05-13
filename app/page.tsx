@@ -10,6 +10,7 @@ import ContactSection from "./components/sections/contact";
 import Footer from "./components/sections/footer";
 import CoupleShowcase from "./components/sections/couple";
 import PortfolioHighlights from "./components/sections/highlight";
+import HighlightsCarousel from "./components/sections/carousel";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
   <PortfolioSection />
   <CoupleShowcase />
   <LuxuryGallery />
+  <HighlightsCarousel />
   {/* <PortfolioHighlights /> */}
   <ContactSection />
   <Footer />
