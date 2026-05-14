@@ -11,7 +11,7 @@ const navItems = [
   { label: "About", href: "/#about" },
   { label: "Portfolio", href: "/#portfolio" },
   { label: "Gallery", href: "/#gallery" },
-  { label: "Couple", href: "/#couple" },
+  { label: "Our Couples", href: "/#couple" },
 ];
 
 export default function LuxuryNavbar() {
@@ -74,17 +74,17 @@ export default function LuxuryNavbar() {
           "
         >
           {/* GLASS */}
-          <div
+          {/* <div
             className="
               absolute
               inset-0
               bg-black/10
               backdrop-blur-[10px]
             "
-          />
+          /> */}
 
           {/* BORDER */}
-          <div
+          {/* <div
             className="
               absolute
               bottom-0
@@ -93,7 +93,7 @@ export default function LuxuryNavbar() {
               w-full
               bg-white/10
             "
-          />
+          /> */}
 
           <div
             className="

@@ -64,7 +64,21 @@ export default function CoupleStories() {
         md:py-32
       "
     >
-      
+        <div className="flex items-start mb-4 z-[999] absolute top-10 left-3">
+                <p
+            className="
+              font-clean
+              text-[12px]
+              uppercase
+              tracking-[0.2em]
+              text-black/60
+              ml-2 md:ml-10
+            "
+          >
+           Our  couples
+          </p>
+        </div>
+    
       {/* BG IMAGE */}
       <div className="absolute inset-0">
         <img

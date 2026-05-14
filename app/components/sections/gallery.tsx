@@ -3,7 +3,7 @@
 const images = [
   {
     id: 1,
-    src: '/images/h1.png',
+    src: '/images/new.png',
   },
   {
     id: 2,

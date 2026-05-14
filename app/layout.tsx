@@ -3,11 +3,7 @@ import { Cormorant_Garamond  ,Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/sections/footer";
 
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-cormorant",
-});
+
 export const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -27,8 +23,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`  ${cormorant.variable}
-        ${inter.variable} h-full antialiased`}
+      className={`${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}<Footer /></body>
     </html>

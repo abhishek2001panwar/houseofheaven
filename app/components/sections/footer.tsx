@@ -143,6 +143,10 @@ const Footer: React.FC = () => {
                 an editorial & cinematic approach
                 for modern couples worldwide.
               </p>
+              <div className="mt-4 space-y-1">
+                <p className="text-[12px] text-stone-300 font-semibold"><span className="text-stone-400 font-normal mr-1">Phone:</span>95358 72776</p>
+                <p className="text-[11px] text-stone-400"><span className="text-stone-500 font-normal mr-1">Location:</span>Bangalore, India</p>
+              </div>
             </div>
             <button
             onClick={()=>router.push("/portfolio")}

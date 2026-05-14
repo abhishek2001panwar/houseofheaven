@@ -25,7 +25,7 @@ const portfolioImages = [
   {
     type: "portrait",
     image:
-      "/images/new.png",
+      "/images/h1.png",
     title: "Luxury",
   },
   {
@@ -39,7 +39,7 @@ const portfolioImages = [
 export default function PortfolioSection() {
     const router = useRouter();
   return (
-    <section id="portfolio" className="w-full bg-[#2e2d2d] py-28 px-5 md:px-10">
+    <section id="portfolio" className="w-full bg-black/90 py-28 px-5 md:px-10">
       
       <div className="mx-auto max-w-[760px]">
 

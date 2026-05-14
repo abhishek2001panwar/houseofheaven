@@ -11,10 +11,13 @@ import Footer from "./components/sections/footer";
 import CoupleShowcase from "./components/sections/couple";
 import PortfolioHighlights from "./components/sections/highlight";
 import HighlightsCarousel from "./components/sections/carousel";
+import VideoGallery from "./components/sections/videogallery";
+import Icons from "./components/icons";
 
 export default function Home() {
   return (
     <>
+    <Icons />
     <LuxuryNavbar />
     <Hero />
    <MomentsSection />
@@ -22,6 +25,7 @@ export default function Home() {
   <PortfolioSection />
   <CoupleShowcase />
   <LuxuryGallery />
+  <VideoGallery/>
   <HighlightsCarousel />
   {/* <PortfolioHighlights /> */}
   <ContactSection />

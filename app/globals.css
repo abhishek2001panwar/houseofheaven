@@ -8,8 +8,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
+  --font-inter: 'Inter', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,14 +39,16 @@ body {
 ::-webkit-scrollbar{
   width: 1px;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-cormorant);
-  font-weight: 400;
+  font-family: var(--font-inter), 'Inter', sans-serif;
+  font-weight: 200;
+  letter-spacing: -0.01em;
 }
 
 p,
@@ -55,5 +58,5 @@ a,
 li,
 input,
 textarea {
-  font-family: var(--font-inter);
+  font-family: var(--font-inter), 'Inter', sans-serif;
 }

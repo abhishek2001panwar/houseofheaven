@@ -2,63 +2,41 @@ import React from "react";
 
 const Story: React.FC = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      
-      {/* BACKGROUND IMAGE */}
+    <section className="relative h-screen w-full overflow-hidden bg-black/95">
+      {/* Background Image with Parallax */}
       <div
-        className="
-          absolute
-          inset-0
-          h-[110vh]
-          w-full
-          bg-cover
-          bg-center
-          bg-no-repeat
-          bg-fixed
-        "
+        className="absolute inset-0 h-[110vh] w-full bg-cover bg-center bg-fixed bg-no-repeat"
         style={{
           backgroundImage: `url('/images/heronew.png')`,
         }}
       />
 
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/40 z-[1]" />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-transparent" />
 
-      {/* CONTENT */}
-      <div
-        className="
-          relative
-          z-10
-          flex
-          h-full
-          items-start
-          px-6
-          pt-28
-          md:px-14
-          md:pt-36
-        "
-      >
+      {/* Content Container */}
+      <div className="relative z-10 flex h-full flex-col justify-end px-6 py-14 md:px-14">
         
-        {/* TEXT BLOCK */}
-        <div className="max-w-[320px] md:max-w-[400px]">
-          {/* SMALL LABEL */}
-          <p
-            className="font-sans text-[10px] md:text-[12px] uppercase tracking-[0.3em] text-white/70 mb-2"
-          >
+        {/* Frosted Glass Card */}
+        <div className="w-full max-w-[480px] rounded-xl border border-white/15 bg-white/8 p-8 backdrop-blur-xl">
+          
+          {/* Accent Line */}
+          
+          {/* Label */}
+          <p className="mb-3 text-[11px] font-medium tracking-[3px] uppercase text-white/70">
             Wedding Stories
           </p>
-          {/* MODERN HEADING */}
-          <h1
-            className="text-white font-bold text-2xl md:text-4xl leading-tight mb-4 drop-shadow-lg"
-          >
+          
+          {/* Heading */}
+          <h1 className="mb-5 text-4xl font-semibold leading-tight text-white md:text-[42px]">
             Timeless. Honest. You.
           </h1>
-          {/* SHORT MODERN SUBTEXT */}
-          <p
-            className="text-white/80 text-[12px] md:text-[14px] font-light"
-          >
-            Modern wedding photography for real moments and real people.
+          
+          {/* Subtext */}
+          <p className="text-sm font-normal leading-relaxed text-white/85 md:text-base">
+            Modern wedding photography that captures real moments with authentic storytelling.
           </p>
+          
         </div>
       </div>
     </section>

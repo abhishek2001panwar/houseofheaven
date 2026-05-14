@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import gsap from "gsap";
 
 export default function Hero() {
   const imageRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -29,28 +31,25 @@ export default function Hero() {
       className="
         relative
         h-screen
-        min-h-[720px]
+        min-h-[790px]
         w-full
         overflow-hidden
         bg-black
       "
     >
       
-      {/* BACKGROUND */}
+      {/* BACKGROUND VIDEO */}
       <div
         ref={imageRef}
         className="absolute inset-0 scale-[1.03]"
       >
-        <img
-          src="/images/herosection.png"
-          alt="Wedding"
-          className="
-            h-full
-            w-full
-           object-cover
-           object-center
-
-          "
+        <video
+          src="https://ik.imagekit.io/d9tsatbk5/IMG_6822.MP4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-cover object-center"
         />
       </div>
 
@@ -120,27 +119,59 @@ export default function Hero() {
               ease: [0.22, 1, 0.36, 1],
             }}
             className="
+            
               leading-[0.88]
-              uppercase
+              capitalize
               tracking-[-0.04em]
               text-white
 
-              text-[3.2rem]
-              sm:text-[4.5rem]
-              md:text-[6rem]
-              lg:text-[7rem]
-              xl:text-[7rem]
-              2xl:text-[7rem]
+              text-[2.7rem]
+              sm:text-[3.9rem]
+              md:text-[5rem]
+              lg:text-[5rem]
+              xl:text-[5rem]
+              2xl:text-[5rem]
             "
             style={{
               WebkitTextStroke:
-                "0.5px rgba(255,255,255,0.9)",
+                "1px rgba(255,255,255,0.9)",
             }}
           >
             House
             
             Of Heaven
           </motion.h1>
+
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 1,
+              delay: 0.8,
+            }}
+            onClick={() => router.push("/#portfolio")}
+            className="
+              mt-6
+              inline-flex
+              items-center
+              justify-center
+              border
+              border-white/30
+              px-6
+              py-3
+              text-[10px]
+              uppercase
+              tracking-[0.35em]
+              text-white
+              transition-all
+              hover:bg-white
+              hover:text-black
+              sm:px-8
+            "
+          >
+            Explore More
+          </motion.button>
+
 
         
         </div>
