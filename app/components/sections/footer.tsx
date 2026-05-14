@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-
+import { FaInstagram } from "react-icons/fa";
 const Footer: React.FC = () => {
 
     const router = useRouter();
@@ -89,9 +89,16 @@ const Footer: React.FC = () => {
               ))}
               {/* SOCIAL */}
               <div className="mt-6 flex gap-4 border-t border-stone-800/50 pt-6">
-                <div className="h-3 w-3 cursor-pointer rounded-full bg-stone-700 transition-colors hover:bg-stone-400" />
-                <div className="h-3 w-3 cursor-pointer rounded-full bg-stone-700 transition-colors hover:bg-stone-400" />
-                <div className="h-3 w-3 cursor-pointer rounded-full bg-stone-700 transition-colors hover:bg-stone-400" />
+                <a
+                  href="https://www.instagram.com/houseofheaven.in"
+                  aria-label="Instagram"
+                  target="_blank"
+                  className="flex h-8 w-8 items-center justify-center rounded-full border border-stone-700 text-stone-400 transition-all hover:border-stone-400 hover:text-white"
+                >
+                  <FaInstagram size={14} strokeWidth={1.8} />
+                </a>
+                {/* <div className="h-3 w-3 cursor-pointer rounded-full bg-stone-700 transition-colors hover:bg-stone-400" />
+                <div className="h-3 w-3 cursor-pointer rounded-full bg-stone-700 transition-colors hover:bg-stone-400" /> */}
               </div>
             </div>
           </div>

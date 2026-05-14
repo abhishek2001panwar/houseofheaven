@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -16,6 +16,7 @@ const navItems = [
 
 export default function LuxuryNavbar() {
   const [showNavbar, setShowNavbar] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -53,6 +54,19 @@ export default function LuxuryNavbar() {
     return () =>
       window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isMobileMenuOpen]);
 
   return (
     <AnimatePresence>
@@ -215,6 +229,14 @@ export default function LuxuryNavbar() {
 
               {/* MOBILE */}
               <button
+                onClick={() =>
+                  setIsMobileMenuOpen((prev) => !prev)
+                }
+                aria-label={
+                  isMobileMenuOpen
+                    ? "Close menu"
+                    : "Open menu"
+                }
                 className="
                   flex
                   h-12
@@ -233,10 +255,49 @@ export default function LuxuryNavbar() {
                   lg:hidden
                 "
               >
-                <Menu size={18} strokeWidth={1.5} />
+                {isMobileMenuOpen ? (
+                  <X size={18} strokeWidth={1.5} />
+                ) : (
+                  <Menu size={18} strokeWidth={1.5} />
+                )}
               </button>
             </div>
           </div>
+
+          <AnimatePresence>
+            {isMobileMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -16 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -16 }}
+                transition={{ duration: 0.25 }}
+                className="mx-6 mb-4 rounded-2xl border border-white/15 bg-black/85 p-5 backdrop-blur-md lg:hidden"
+              >
+                <nav className="flex flex-col gap-4">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-[11px] uppercase tracking-[0.28em] text-white/85 transition-colors hover:text-white"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </nav>
+
+                <button
+                  onClick={() => {
+                    router.push("/#contact");
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="mt-6 w-full border border-white/25 px-4 py-3 text-[10px] uppercase tracking-[0.3em] text-white transition-all hover:border-white hover:bg-white hover:text-black"
+                >
+                  Inquire
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.header>
       )}
     </AnimatePresence>
