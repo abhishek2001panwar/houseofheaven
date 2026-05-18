@@ -44,7 +44,7 @@ export default function PremiumGallery() {
           >
            Our  Gallery
           </p>        </div>
-        <div className="grid grid-cols-3 w-full p-5">
+        <div className="grid grid-cols-3 w-full p-5 gap-px">
           {images.map((img) => (
             <div
               key={img.id}
